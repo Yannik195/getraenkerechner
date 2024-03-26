@@ -1,0 +1,16 @@
+.item {
+  border-radius: 4px;
+  background-color: #e2e6ea;
+}
+
+.volume {
+}
+
+.name {
+}
+
+.price {
+  color: #051c38;
+  background-color: #b3d6ff;
+  border-radius: 0 4px 4px 0;
+}
