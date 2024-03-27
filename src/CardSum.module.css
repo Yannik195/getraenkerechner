@@ -1,0 +1,25 @@
+.card {
+  color: #ffffff;
+  background-color: #255894;
+  border-radius: 4px;
+  padding: 12px 24px;
+}
+
+.card h1,
+.card h2,
+.card p {
+  margin: 0;
+}
+
+.button {
+  border: none;
+  color: #ffffff;
+  background-color: #0c305a;
+  border-radius: 4px;
+  padding: 0px 12px;
+}
+
+.sum {
+  display: flex;
+  justify-content: space-between;
+}

@@ -2,7 +2,7 @@
   border-radius: 4px;
   background-color: #e2e6ea;
   display: grid;
-  grid-template-columns: 80px 1fr 3fr 80px;
+  grid-template-columns: 64px 1fr 5fr 64px;
   align-items: center;
   margin-bottom: 8px;
 }
@@ -26,7 +26,8 @@
 
 .volume {
   font-weight: 700;
-  margin-left: 4px;
+  margin: 0 12px;
+  text-align: right;
 }
 
 .name {
@@ -38,6 +39,6 @@
   border-radius: 0 4px 4px 0;
   font-weight: 700;
   display: inline-block;
-  padding: 4px 24px;
+  padding: 4px 12px;
   cursor: pointer;
 }

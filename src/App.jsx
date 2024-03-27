@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Item from "./Item";
+import CardSum from "./CardSum";
 
 const getränkeListe = [
   {
@@ -126,8 +127,55 @@ const getränkeListe = [
 ];
 
 function App() {
+  const [orderList, setOrderList] = useState([]);
+
+  function addItemToOrderList(item, amount = 1) {
+    // Function logic to update orderList (no useState here)
+    const existingItem = orderList.find((i) => i.name === item.name);
+
+    if (existingItem) {
+      // Update amount of existing item
+      const newOrderList = orderList.map((i) => {
+        if (i.name === item.name) {
+          return { ...i, amount: i.amount + amount };
+        }
+        return i;
+      });
+      setOrderList(newOrderList);
+    } else {
+      // Add new item with amount
+      const newItem = { ...item, amount };
+      setOrderList([...orderList, newItem]);
+    }
+  }
+
+  function removeItemFromOrderList(item) {
+    const existingItem = orderList.find((i) => i.name === item.name);
+
+    if (existingItem) {
+      if (existingItem.amount === 1) {
+        // Entfernen des Elements, wenn amount 1 ist
+        setOrderList(orderList.filter((i) => i.name !== item.name));
+      } else {
+        // Aktualisieren des amount-Werts
+        const newOrderList = orderList.map((i) => {
+          if (i.name === item.name) {
+            return { ...i, amount: i.amount - 1 };
+          }
+          return i;
+        });
+        setOrderList(newOrderList);
+      }
+    }
+  }
+
+  function resetOrderList() {
+    setOrderList([]);
+  }
+
   return (
     <>
+      <CardSum orderList={orderList} resetOrderList={resetOrderList} />
       <div>
         {getränkeListe.map((kategorie) => (
           <div key={kategorie.name}>
@@ -135,7 +183,11 @@ function App() {
             <ul style={{ listStyle: "none", padding: "0" }}>
               {kategorie.items.map((getränk) => (
                 <li key={getränk.name}>
-                  <Item getränk={getränk} />
+                  <Item
+                    addItemToOrderList={addItemToOrderList}
+                    removeItemFromOrderList={removeItemFromOrderList}
+                    getränk={getränk}
+                  />
                 </li>
               ))}
             </ul>
