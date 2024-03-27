@@ -3,7 +3,7 @@ import { useState } from "react";
 import styles from "./Item.module.css";
 
 function Item({ getränk }) {
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(0);
 
   const handleIncreaseCount = () => {
     setCount(count + 1);

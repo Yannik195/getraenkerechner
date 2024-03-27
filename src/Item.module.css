@@ -1,8 +1,8 @@
 .item {
   border-radius: 4px;
   background-color: #e2e6ea;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 80px 1fr 3fr 80px;
   align-items: center;
   margin-bottom: 8px;
 }
@@ -11,17 +11,25 @@
   background-color: #ef6262;
   font-weight: 700;
   border-radius: 4px 0 0 4px;
-  display: inline-block;
   padding: 4px 24px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.item .count {
+  opacity: 0;
+}
+
+.item .count:not(:empty) {
+  opacity: 1;
 }
 
 .volume {
   font-weight: 700;
-  flex-grow: 1;
+  margin-left: 4px;
 }
 
 .name {
-  flex-grow: 2;
 }
 
 .price {
@@ -31,4 +39,5 @@
   font-weight: 700;
   display: inline-block;
   padding: 4px 24px;
+  cursor: pointer;
 }
