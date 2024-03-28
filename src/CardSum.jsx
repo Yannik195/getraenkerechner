@@ -5,7 +5,17 @@ function CardSum({ orderList, resetOrderList }) {
   return (
     <div className={styles.card}>
       <h1>Getränkerechner</h1>
+
       <div className={styles.list}>
+        {orderList.length === 0 && (
+          <ul style={{ fontStyle: "italic", margin: "0" }}>
+            <li>
+              Tippe auf das blaue Label mit dem Preis, um ein Getränk
+              auszuwählen.
+            </li>
+            <li>Entferne ein Getränk durch antippen des roten Labels.</li>
+          </ul>
+        )}
         {orderList.map((getränk) => {
           return (
             <p className={styles.item}>
