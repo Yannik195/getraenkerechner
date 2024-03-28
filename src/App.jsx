@@ -23,12 +23,12 @@ const getränkeListe = [
         volume: 0.2,
       },
       {
-        name: "Cola, Fanta, etc",
+        name: "Cola, Fanta, etc klein",
         price: 3.0,
         volume: 0.2,
       },
       {
-        name: "Cola, Fanta etc",
+        name: "Cola, Fanta, etc groß",
         price: 5.0,
         volume: 0.4,
       },
@@ -78,12 +78,12 @@ const getränkeListe = [
     name: "Bier",
     items: [
       {
-        name: "Kellerbier",
+        name: "Kellerbier klein",
         price: 4.5,
         volume: 0.3,
       },
       {
-        name: "Kellerbier",
+        name: "Kellerbier groß",
         price: 5.5,
         volume: 0.5,
       },
