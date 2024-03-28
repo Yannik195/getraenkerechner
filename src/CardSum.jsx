@@ -9,9 +9,10 @@ function CardSum({ orderList }) {
         {orderList.length === 0 && (
           <ul style={{ fontStyle: "italic", margin: "0" }}>
             <li>
-              Wähle Getränke aus um den Gesamtpreis der Bestellung zu berechnen.
+              Wähle Getränke aus, um den Gesamtpreis der Bestellung zu
+              berechnen.
             </li>
-            <li>Entferne ein Getränk durch antippen des roten Labels.</li>
+            <li>Entferne ein Getränk durch Antippen des roten Labels.</li>
           </ul>
         )}
         {orderList.map((getränk) => {
