@@ -1,0 +1,29 @@
+.sum {
+  color: #ffffff;
+  background-color: #255894;
+  border-radius: 0 0 4px 4px;
+  padding: 12px 24px;
+  position: sticky;
+  top: 0;
+}
+
+.sum hr {
+  border: 1px solid white;
+}
+
+.button {
+  border: none;
+  color: #ffffff;
+  background-color: #0c305a;
+  border-radius: 4px;
+  padding: 0px 12px;
+}
+
+.sum h2 {
+  margin: 0;
+}
+
+.sum div {
+  display: flex;
+  justify-content: space-between;
+}

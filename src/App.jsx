@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./App.css";
-import Item from "./Item";
-import CardSum from "./CardSum";
+import Item from "./Item.jsx";
+import CardSum from "./CardSum.jsx";
+import Sum from "./Sum.jsx";
 
 const getränkeListe = [
   {
@@ -257,7 +258,8 @@ function App() {
 
   return (
     <>
-      <CardSum orderList={orderList} resetOrderList={resetOrderList} />
+      <CardSum orderList={orderList} />
+      <Sum orderList={orderList} resetOrderList={resetOrderList}></Sum>
       <div>
         {getränkeListe.map((kategorie) => (
           <div key={kategorie.name}>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./CardSum.module.css";
 
-function CardSum({ orderList, resetOrderList }) {
+function CardSum({ orderList }) {
   return (
     <div className={styles.card}>
       <h1>Getränkerechner</h1>
@@ -27,14 +27,6 @@ function CardSum({ orderList, resetOrderList }) {
             </p>
           );
         })}
-      </div>
-
-      <hr />
-      <div className={styles.sum}>
-        <button className={styles.button} onClick={resetOrderList}>
-          Reset
-        </button>
-        <h2>€{calculateTotalSum(orderList)}</h2>
       </div>
     </div>
   );
