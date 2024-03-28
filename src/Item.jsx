@@ -21,7 +21,10 @@ function Item({
       <div className={styles.count} onClick={handleDecreaseCount}>
         {itemCounts[getränk.name] > 0 && itemCounts[getränk.name]}
       </div>
-      <span className={styles.volume}>{getränk.volume}l</span>
+      <span className={styles.volume}>
+        {getränk.volume}
+        {getränk.volume != null ? "l" : ""}
+      </span>
       <span className={styles.name}>{getränk.name}</span>
       <div className={styles.price} onClick={handleIncreaseCount}>
         €{getränk.price}{" "}
