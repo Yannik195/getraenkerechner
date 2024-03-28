@@ -22,9 +22,11 @@
 
 .sum h2 {
   margin: 0;
+  grid-column-start: 3;
 }
 
 .sum div {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr;
   justify-content: space-between;
 }
