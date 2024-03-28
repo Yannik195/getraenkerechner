@@ -11,6 +11,23 @@
   margin: 0;
 }
 
+.list {
+  line-height: 3ex;
+  min-height: 12ex;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr;
+}
+
+.item .price {
+}
+
+.card hr {
+  border: 1px solid white;
+}
+
 .button {
   border: none;
   color: #ffffff;
@@ -20,6 +37,10 @@
 }
 
 .sum {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr;
+}
+
+.sum h2 {
+  grid-column-start: 3;
 }

@@ -5,15 +5,21 @@ function CardSum({ orderList, resetOrderList }) {
   return (
     <div className={styles.card}>
       <h1>Getränkerechner</h1>
-      {orderList.map((getränk) => {
-        return (
-          <p>
-            <span>{getränk.amount}x </span>
-            <span>{getränk.name}</span>
-            <span> €{getränk.price * getränk.amount}</span>
-          </p>
-        );
-      })}
+      <div className={styles.list}>
+        {orderList.map((getränk) => {
+          return (
+            <p className={styles.item}>
+              <span>{getränk.amount}x </span>
+              <span>{getränk.name}</span>
+              <span className={styles.price}>
+                {" "}
+                €{getränk.price * getränk.amount}
+              </span>
+            </p>
+          );
+        })}
+      </div>
+
       <hr />
       <div className={styles.sum}>
         <button className={styles.button} onClick={resetOrderList}>
