@@ -8,18 +8,68 @@ const getränkeListe = [
     name: "Alkoholfreie Getränke",
     items: [
       {
-        name: "Apfelschorle",
-        price: 2.5,
-        volume: 0.5,
-      },
-      {
-        name: "Mineralwasser",
+        name: "Tafelwasser gezapft klein",
         price: 2.0,
-        volume: 0.33,
+        volume: 0.2,
       },
       {
-        name: "Coca-Cola",
-        price: 2.2,
+        name: "Tafelwasser gezapft groß",
+        price: 3.0,
+        volume: 0.4,
+      },
+      {
+        name: "Teinacher still Flasche",
+        price: 3.0,
+        volume: 0.2,
+      },
+      {
+        name: "Cola, Fanta, etc",
+        price: 3.0,
+        volume: 0.2,
+      },
+      {
+        name: "Cola, Fanta etc",
+        price: 5.0,
+        volume: 0.4,
+      },
+      {
+        name: "Orangina",
+        price: 3.5,
+        volume: 0.25,
+      },
+      {
+        name: "Apfelschorle klein",
+        price: 3.0,
+        volume: 0.2,
+      },
+      {
+        name: "Apfelschorle groß",
+        price: 5.0,
+        volume: 0.4,
+      },
+      {
+        name: "Holunderschorle klein",
+        price: 3.5,
+        volume: 0.2,
+      },
+      {
+        name: "Holunderschorle groß",
+        price: 6.0,
+        volume: 0.4,
+      },
+      {
+        name: "Apfel- oder Orangensaft",
+        price: 3.5,
+        volume: 0.2,
+      },
+      {
+        name: "Bitter Lemon / Tonic Water",
+        price: 3.5,
+        volume: 0.2,
+      },
+      {
+        name: "Seezüngle",
+        price: 4.0,
         volume: 0.33,
       },
     ],
@@ -28,39 +78,29 @@ const getränkeListe = [
     name: "Bier",
     items: [
       {
-        name: "Helles",
-        price: 3.0,
+        name: "Kellerbier",
+        price: 4.5,
+        volume: 0.3,
+      },
+      {
+        name: "Kellerbier",
+        price: 5.5,
         volume: 0.5,
       },
       {
-        name: "Pils",
-        price: 3.2,
-        volume: 0.5,
-      },
-      {
-        name: "Weizen",
-        price: 3.5,
-        volume: 0.5,
+        name: "Flasche",
+        price: 4.5,
+        volume: 0.3,
       },
     ],
   },
   {
-    name: "Sekt",
+    name: "Sekt/Prosecco",
     items: [
       {
-        name: "Prosecco",
-        price: 4.0,
-        volume: 0.75,
-      },
-      {
-        name: "Cava",
-        price: 4.5,
-        volume: 0.75,
-      },
-      {
-        name: "Champagner",
-        price: 6.0,
-        volume: 0.75,
+        name: "Sekt",
+        price: 7.0,
+        volume: 0.1,
       },
     ],
   },
@@ -68,19 +108,19 @@ const getränkeListe = [
     name: "Wein",
     items: [
       {
-        name: "Weißwein",
-        price: 5.0,
-        volume: 0.75,
+        name: "klein",
+        price: 4.0,
+        volume: 0.1,
       },
       {
-        name: "Rotwein",
-        price: 5.5,
-        volume: 0.75,
+        name: "groß",
+        price: 7.5,
+        volume: 0.2,
       },
       {
-        name: "Roséwein",
-        price: 5.2,
-        volume: 0.75,
+        name: "Schorle",
+        price: 4.5,
+        volume: 0.2,
       },
     ],
   },
@@ -88,18 +128,8 @@ const getränkeListe = [
     name: "Aperitif",
     items: [
       {
-        name: "Campari",
-        price: 4.0,
-        volume: 0.2,
-      },
-      {
-        name: "Aperol",
-        price: 4.5,
-        volume: 0.2,
-      },
-      {
-        name: "Hugo",
-        price: 5.0,
+        name: "Martini, Aperol etc.",
+        price: 8.5,
         volume: 0.2,
       },
     ],
@@ -108,19 +138,41 @@ const getränkeListe = [
     name: "Heißgetränke",
     items: [
       {
-        name: "Kaffee",
-        price: 2.5,
-        volume: 0.2,
-      },
-      {
-        name: "Espresso",
+        name: "Espresso/Kaffe/Tee",
         price: 3.0,
-        volume: 0.1,
       },
       {
-        name: "Cappuccino",
+        name: "Cappucino",
         price: 3.5,
-        volume: 0.25,
+      },
+      {
+        name: "Milchkaffe, Latte, 2xEspresso",
+        price: 3.0,
+      },
+    ],
+  },
+  {
+    name: "Snacks",
+    items: [
+      {
+        name: "Snacks",
+        price: 2.0,
+      },
+      {
+        name: "Chips",
+        price: 2.5,
+      },
+      {
+        name: "Brezel",
+        price: 2.0,
+      },
+      {
+        name: "Butter Brezel",
+        price: 2.5,
+      },
+      {
+        name: "Brötchen",
+        price: 4.0,
       },
     ],
   },
