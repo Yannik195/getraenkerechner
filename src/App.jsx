@@ -128,8 +128,22 @@ const getränkeListe = [
 
 function App() {
   const [orderList, setOrderList] = useState([]);
+  const [itemCounts, setItemCounts] = useState(
+    getränkeListe.reduce((acc, kategorie) => {
+      kategorie.items.forEach((item) => {
+        acc[item.name] = 0;
+      });
+      return acc;
+    }, {})
+  );
 
   function addItemToOrderList(item, amount = 1) {
+    // Update itemCounts
+    setItemCounts((prevCounts) => ({
+      ...prevCounts,
+      [item.name]: prevCounts[item.name] + amount,
+    }));
+
     // Function logic to update orderList (no useState here)
     const existingItem = orderList.find((i) => i.name === item.name);
 
@@ -150,6 +164,14 @@ function App() {
   }
 
   function removeItemFromOrderList(item) {
+    // Update itemCounts
+    if (itemCounts[item.name] > 0) {
+      setItemCounts((prevCounts) => ({
+        ...prevCounts,
+        [item.name]: prevCounts[item.name] - 1,
+      }));
+    }
+
     const existingItem = orderList.find((i) => i.name === item.name);
 
     if (existingItem) {
@@ -171,6 +193,14 @@ function App() {
 
   function resetOrderList() {
     setOrderList([]);
+    setItemCounts(
+      getränkeListe.reduce((acc, kategorie) => {
+        kategorie.items.forEach((item) => {
+          acc[item.name] = 0;
+        });
+        return acc;
+      }, {})
+    );
   }
 
   return (
@@ -187,6 +217,7 @@ function App() {
                     addItemToOrderList={addItemToOrderList}
                     removeItemFromOrderList={removeItemFromOrderList}
                     getränk={getränk}
+                    itemCounts={itemCounts}
                   />
                 </li>
               ))}

@@ -2,25 +2,24 @@ import { useState } from "react";
 
 import styles from "./Item.module.css";
 
-function Item({ getränk, addItemToOrderList, removeItemFromOrderList }) {
-  const [count, setCount] = useState(0);
-
+function Item({
+  getränk,
+  addItemToOrderList,
+  removeItemFromOrderList,
+  itemCounts,
+}) {
   const handleIncreaseCount = () => {
-    setCount(count + 1);
     addItemToOrderList(getränk);
   };
 
   const handleDecreaseCount = () => {
-    if (count > 0) {
-      setCount(count - 1);
-    }
     removeItemFromOrderList(getränk);
   };
 
   return (
     <div className={styles.item}>
       <div className={styles.count} onClick={handleDecreaseCount}>
-        {count > 0 && count}
+        {itemCounts[getränk.name] > 0 && itemCounts[getränk.name]}
       </div>
       <span className={styles.volume}>{getränk.volume}l</span>
       <span className={styles.name}>{getränk.name}</span>
