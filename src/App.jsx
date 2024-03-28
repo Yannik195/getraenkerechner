@@ -147,7 +147,7 @@ const getränkeListe = [
       },
       {
         name: "Milchkaffe, Latte, 2xEspresso",
-        price: 3.0,
+        price: 4.0,
       },
     ],
   },

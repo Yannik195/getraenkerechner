@@ -25,7 +25,9 @@ function Item({
         {getränk.volume}
         {getränk.volume != null ? "l" : ""}
       </span>
-      <span className={styles.name}>{getränk.name}</span>
+      <span className={styles.name} onClick={handleIncreaseCount}>
+        {getränk.name}
+      </span>
       <div className={styles.price} onClick={handleIncreaseCount}>
         €{getränk.price}{" "}
       </div>

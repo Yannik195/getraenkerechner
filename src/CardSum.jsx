@@ -5,7 +5,6 @@ function CardSum({ orderList, resetOrderList }) {
   return (
     <div className={styles.card}>
       <h1>Getränkerechner</h1>
-
       <div className={styles.list}>
         {orderList.length === 0 && (
           <ul style={{ fontStyle: "italic", margin: "0" }}>
